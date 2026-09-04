@@ -5,7 +5,7 @@ A pet shop management simulator built in Unreal Engine 5 with C++.
 ## Status
 Early development. Currently implemented:
 - `FShopItemData` - data table row struct defining shop items (name, prices, mesh)
-- `AShopShjelf`   - placeable actor that displays an item from the data table
+- `AShopShelf`    - placeable actor that displays an item from the data table
 
 ## Built With
 - Unreal Engine 5.8
