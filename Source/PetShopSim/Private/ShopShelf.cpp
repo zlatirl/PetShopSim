@@ -33,3 +33,26 @@ void AShopShelf::RefreshDisplay()
 		ItemMesh->SetStaticMesh(Loaded);
 	}
 }
+
+int32 AShopShelf::GetStock() const
+{
+	const UGameInstance* GI = GetGameInstance();
+	if (!GI)
+	{
+		return 0;
+	}
+
+	const UShopStockSubsystem* Stock = GI->GetSubsystem<UShopStockSubsystem>();
+	return Stock ? Stock->GetStock(GetItemID()) : 0;
+}
+
+void AShopShelf::DebugAddStock()
+{
+	if (UGameInstance* GI = GetGameInstance())
+	{
+		if (UShopStockSubsystem* Stock = GI->GetSubsystem<UShopStockSubsystem>())
+		{
+			Stock->AddStock(GetItemID(), 5);
+		}
+	}
+}
