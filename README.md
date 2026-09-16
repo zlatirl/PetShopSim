@@ -1,4 +1,4 @@
-# PetShopSim
+# Pet Shop Sim
 
 A pet shop management simulator built in Unreal Engine 5 with C++.
 
